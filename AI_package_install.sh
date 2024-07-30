@@ -50,8 +50,8 @@ else
 	echo "[*] #######################################################"
 	echo "[+] Installing: jupyter"
 	conda install -yq jupyter >/dev/null 2>&1
-	echo "[+] Installing: huggingface_hub, transformers, pytorch"
-	conda install -yq huggingface_hub transformers pytorch >/dev/null 2>&1
+	echo "[+] Installing: huggingface_hub, transformers, pytorch, datasets"
+	conda install -yq huggingface_hub transformers pytorch datasets >/dev/null 2>&1
 	echo "[+] Installing: pandas, numpy, matplotlib"
 	conda install -yq pandas numpy matplotlib >/dev/null 2>&1
 	echo "[+] Installing: nltk, seaborn, plotly"
