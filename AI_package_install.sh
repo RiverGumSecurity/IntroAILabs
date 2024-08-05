@@ -27,8 +27,8 @@ if [[ `uname -r` == *"WSL2"* ]]; then
 	echo "[*] ##############################################"
 	echo "[+] Installing: jupyter"
 	pip install -q jupyter >/dev/null 2>&1
-	echo "[+] Installing: huggingface_hub, transformers, pytorch"
-	pip install -q huggingface_hub transformers torch >/dev/null 2>&1
+	echo "[+] Installing: huggingface_hub, transformers, pytorch, datasets"
+	pip install -q huggingface_hub transformers torch datasets >/dev/null 2>&1
 	echo "[+] Installing: pandas, numpy, matplotlib"
 	pip install -q pandas numpy matplotlib >/dev/null 2>&1
 	echo "[+] Installing: nltk, seaborn, plotly"
@@ -50,8 +50,8 @@ else
 	echo "[*] #######################################################"
 	echo "[+] Installing: jupyter"
 	conda install -yq jupyter >/dev/null 2>&1
-	echo "[+] Installing: huggingface_hub, transformers, pytorch"
-	conda install -yq huggingface_hub transformers pytorch >/dev/null 2>&1
+	echo "[+] Installing: huggingface_hub, transformers, pytorch, datasets"
+	conda install -yq huggingface_hub transformers pytorch datasets >/dev/null 2>&1
 	echo "[+] Installing: pandas, numpy, matplotlib"
 	conda install -yq pandas numpy matplotlib >/dev/null 2>&1
 	echo "[+] Installing: nltk, seaborn, plotly"
