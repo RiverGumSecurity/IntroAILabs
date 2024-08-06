@@ -1,6 +1,6 @@
 huggingface-hub
-transformers==4.43.4
 torch==2.3.1
+transformers
 datasets==2.20.0
 pandas==2.2.2
 numpy==1.26.4
