@@ -34,7 +34,7 @@ if [[ `uname -r` == *"WSL2"* ]]; then
 export LD_LIBRARY_PATH=\`echo \$(find $HOME/miniconda3/envs/$CONDA_DEFAULT_ENV/lib/python3.10/site-packages/nvidia -type d -name lib) | sed 's/ /:/g'\`
 __EOF__
 	echo "[+] Installing: torch"
-	pip install torch==2.3.1 2>&1
+	pip install torch 2>&1
 	python -c 'import tensorflow as tf; dev=tf.config.list_physical_devices("GPU"); print(f"[+] GPU Device Check: {dev}")' 2>/dev/null
 else
 	echo "[*] #######################################################"
