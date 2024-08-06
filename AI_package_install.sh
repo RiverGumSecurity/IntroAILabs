@@ -30,7 +30,7 @@ if [[ `uname -r` == *"WSL2"* ]]; then
 	echo "[+] Installing all packages from requirements.wsl2 using PIP"
 	pip install -r requirements.wsl2 2>&1
 	export LD_LIBRARY_PATH=`echo $(find $HOME/miniconda3/envs/$CONDA_DEFAULT_ENV/lib/python3.10/site-packages/nvidia -type d -name lib) | sed 's/ /:/g'`
-	cat <<__EOF__ >>$HOME/.bashrc
+	 (cat $HOME/.bashrc | grep -q LD_LIBRARY_PATH) || cat <<__EOF__ >>$HOME/.bashrc
 	export LD_LIBRARY_PATH=\`echo \$(find $HOME/miniconda3/envs/$CONDA_DEFAULT_ENV/lib/python3.10/site-packages/nvidia -type d -name lib) | sed 's/ /:/g'\`
 __EOF__
 	echo "[+] Installing: torch"
