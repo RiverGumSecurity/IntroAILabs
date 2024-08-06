@@ -9,4 +9,4 @@ seaborn
 plotly
 scikit-learn
 tensorflow[and-cuda]
-torch==2.3.1
+torch==2.2.2
