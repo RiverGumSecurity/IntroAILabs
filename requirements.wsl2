@@ -1,0 +1,10 @@
+huggingface-hub
+transformers==4.43.4
+datasets==2.20.0
+pandas==2.2.2
+numpy==1.26.4
+matplotlib==3.9.0
+seaborn==0.13.2
+plotly==5.23.0
+scikit-learn==1.5.1
+tensorflow[and-cuda]
