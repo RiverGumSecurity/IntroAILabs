@@ -25,10 +25,10 @@ if [[ `uname -r` == *"WSL2"* ]]; then
 	echo "[*] ##############################################"
 	echo "[*] ## Target System is WSL2: using PIP method. ##"
 	echo "[*] ##############################################"
-	echo "[+] Installing all packages from requirements.wsl2 using PIP"
-	pip install -r requirements.wsl2 2>&1
 	echo "[+] Installing: cudatoolkit for WSL2"
 	conda install -yq cudatoolkit >/dev/null 2>&1
+	echo "[+] Installing all packages from requirements.wsl2 using PIP"
+	pip install -r requirements.wsl2 2>&1
 	export LD_LIBRARY_PATH=`echo $(find $HOME/miniconda3/envs/$CONDA_DEFAULT_ENV/lib/python3.10/site-packages/nvidia -type d -name lib) | sed 's/ /:/g'`
 	cat <<__EOF__ >>$HOME/.bashrc
 export LD_LIBRARY_PATH=\`echo \$(find $HOME/miniconda3/envs/$CONDA_DEFAULT_ENV/lib/python3.10/site-packages/nvidia -type d -name lib) | sed 's/ /:/g'\`
