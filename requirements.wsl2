@@ -1,0 +1,11 @@
+jupyter
+huggingface-hub
+transformers
+datasets
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+scikit-learn
+tensorflow[and-cuda]
