@@ -52,6 +52,8 @@ else
 	conda install -yq scikit-learn >/dev/null 2>&1
 	echo "[+] Installing: tensorflow"
 	conda install -yq tensorflow >/dev/null 2>&1
+	echo "[+] Upgrading: datasets"
+	pip install -U datasets 2>&1
 fi
 echo ""
 echo "#############################################"
