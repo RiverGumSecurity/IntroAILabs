@@ -35,7 +35,8 @@ export LD_LIBRARY_PATH=\`echo \$(find $HOME/miniconda3/envs/$CONDA_DEFAULT_ENV/l
 __EOF__
 	echo "[+] Installing: torch"
 	pip install torch 2>&1
-	python -c 'import tensorflow as tf; dev=tf.config.list_physical_devices("GPU"); print(f"[+] GPU Device Check: {dev}")' 2>/dev/null
+	python -c 'import tensorflow as tf; dev=tf.config.list_physical_devices("GPU"); print(f"[+] TensorFlow Device Check: {dev}")' 2>/dev/null
+	python -c 'import torch; torch.cuda.is_available() and print("[+] Pytorch Device Check: CUDA is available.")'
 else
 	echo "[*] #######################################################"
 	echo "[*] ## Target System UNIX/MacOS/BSD: using conda method. ##"
