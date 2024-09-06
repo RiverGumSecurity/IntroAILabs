@@ -36,7 +36,7 @@ __EOF__
 	echo "[+] Installing: torch"
 	pip install torch 2>&1
 	python -c 'import tensorflow as tf; dev=tf.config.list_physical_devices("GPU"); print(f"[+] TensorFlow Device Check: {dev}")' 2>/dev/null
-	python -c 'import torch; torch.cuda.is_available() and print("[+] Pytorch Device Check: CUDA is available.")'
+	python -c 'import torch; torch.cuda.is_available() and print("[+] Pytorch Device Check: CUDA is available.")' 2>/dev/null
 else
 	echo "[*] #######################################################"
 	echo "[*] ## Target System UNIX/MacOS/BSD: using conda method. ##"
